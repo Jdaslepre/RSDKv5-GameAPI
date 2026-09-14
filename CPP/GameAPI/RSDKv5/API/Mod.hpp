@@ -82,6 +82,7 @@ inline void AddModCallback(int32 callbackID, std::function<void(void *)> callbac
 #if RETRO_MOD_LOADER_VER >= 3
 // Entities
 struct Entity {
+    uint16 classID;
     int32 index;
 
     template <class T> static typename T::ModEntity *Get(void *entity) { return Get<T>(entity, nullptr); }

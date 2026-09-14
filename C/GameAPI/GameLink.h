@@ -259,7 +259,9 @@ typedef struct {
 #endif
 
 #if RETRO_USE_MOD_LOADER && RETRO_MOD_LOADER_VER >= 3
-#define MOD_ENTITY int32 index;
+#define MOD_ENTITY                                                                                                                                   \
+    uint16 classID;                                                                                                                                  \
+    int32 index;
 
 typedef struct {
     MOD_ENTITY
